@@ -57,3 +57,12 @@ function calculate() {
     }
 }
 
+
+function deleteLastCharacter() {
+    display.value = display.value.slice(0, -1);
+}
+
+function appendDecimal() {
+    display.value += ".";
+}
+
