@@ -1,43 +1,116 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page Layout */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
     font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+/* Calculator Container */
 .calculator {
-    width: 300px;
-    background: white;
+    width: 350px;
+    background: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Display */
 #display {
     width: 100%;
-    height: 60px;
-    font-size: 24px;
-    text-align: right;
+    height: 70px;
+    margin-bottom: 20px;
     padding: 10px;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: right;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    background: #f8f9fa;
+    color: #333;
 }
 
+/* Button Grid */
 .buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
+/* General Button Style */
 button {
-    padding: 15px;
-    font-size: 20px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
     cursor: pointer;
+    background-color: #e9ecef;
+    transition: all 0.2s ease;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #dbe4ff;
+    transform: translateY(-2px);
+}
+
+/* Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Operator Buttons */
+button:nth-child(11),
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(14) {
+    background-color: #4f46e5;
+    color: white;
+}
+
+button:nth-child(11):hover,
+button:nth-child(12):hover,
+button:nth-child(13):hover,
+button:nth-child(14):hover {
+    background-color: #4338ca;
+}
+
+/* Clear Button */
+button:nth-child(15) {
+    background-color: #ef4444;
+    color: white;
+}
+
+button:nth-child(15):hover {
+    background-color: #dc2626;
+}
+
+/* Equals Button */
+button:nth-child(16) {
+    background-color: #22c55e;
+    color: white;
+}
+
+button:nth-child(16):hover {
+    background-color: #16a34a;
+}
+
+/* Backspace Button */
+button:nth-child(17) {
+    grid-column: span 4;
+    background-color: #f59e0b;
+    color: white;
+}
+
+button:nth-child(17):hover {
+    background-color: #d97706;
 }
